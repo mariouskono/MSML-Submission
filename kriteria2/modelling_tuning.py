@@ -1,4 +1,3 @@
-import pandas as pd  # HAPUS baris ini karena tidak digunakan
 import mlflow
 import mlflow.sklearn
 from sklearn.datasets import load_iris
