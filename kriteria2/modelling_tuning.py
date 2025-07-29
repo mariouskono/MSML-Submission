@@ -1,16 +1,13 @@
-# modelling_tuning.py
-
-import pandas as pd
+import pandas as pd  # HAPUS baris ini karena tidak digunakan
 import mlflow
 import mlflow.sklearn
-
-# Set tracking URI ke MLflow server lokal di port 5000
-mlflow.set_tracking_uri("http://localhost:5000")
-
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, precision_score
+
+# Set tracking URI ke MLflow server lokal di port 5000
+mlflow.set_tracking_uri("http://localhost:5000")
 
 with mlflow.start_run():
     try:
