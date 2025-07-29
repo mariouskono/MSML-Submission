@@ -24,6 +24,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Linting (flake8)
+      run: |
+        pip install flake8
+        flake8 . --exclude=venv --max-line-length=120
+
     - name: Run model script
       run: |
         python kriteria2/modelling.py
